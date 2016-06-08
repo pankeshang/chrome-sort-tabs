@@ -1,5 +1,5 @@
 {
-  "name": "Chrome Sort Tabs",
+  "name": "Sort Tabs",
   "description": "Chrome Sort Tabs",
   "version": "1.0",
   "background": { 
@@ -15,5 +15,14 @@
   "browser_action": {
       "name": "Organize"
   },
-  "manifest_version": 2
+  "manifest_version": 2,
+  "commands": {
+    "default": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Ctrl+Shift+S"
+      },
+      "description": "Activate the extension"
+    }
+  } 
 }
