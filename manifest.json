@@ -17,12 +17,5 @@
   },
   "manifest_version": 2,
   "commands": {
-    "default": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+S",
-        "mac": "Ctrl+Shift+S"
-      },
-      "description": "Activate the extension"
-    }
   } 
 }

@@ -155,7 +155,5 @@ chrome.browserAction.onClicked.addListener(PerformSortTab);
 
 // Command listener
 chrome.commands.onCommand.addListener(function(command) {
-  if (command === 'default') {
     PerformSortTab();
-  }
 });
