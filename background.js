@@ -17,8 +17,8 @@ SortHelper.getURLParser = function (tab) {
     parser.hash;     // => "#hash"
     parser.host;     // => "example.com:3000"
   */
-  var parser = document.createElement('a');
-  parser.href = tab.url;
+
+  parser = new URL(tab.url);
   parser.rootDomain = parser.hostname.split('.').slice(-2).join('.'); // www.pankeshang.com => pankeshang.com
   return parser;
 };
@@ -145,13 +145,13 @@ SortHelper.sortTabs = function (tabs) {
 function PerformSortTab() {
   chrome.tabs.query({},
     function(tabs) {
-
       SortHelper.sortTabs(tabs);
     });
 };
 
 //First
-chrome.browserAction.onClicked.addListener(PerformSortTab);
+chrome.action.onClicked.addListener(PerformSortTab);
+
 
 // Command listener
 chrome.commands.onCommand.addListener(function(command) {
